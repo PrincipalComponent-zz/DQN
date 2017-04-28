@@ -33,23 +33,22 @@ if __name__ == '__main__':
 
 
     # settings
-    log_dir = os.path.join('.','logs',FLAGS.env+'_'+time_str)
-
+    log_dir = os.path.join('..','logs',FLAGS.env+'_'+time_str)
 
     # Q-network
     q_network = QNetwork(
         d_act   = D_ACT,
         d_state = D_STATE,
-        f_switch= 10000,
-        lr      = 0.00025,
-        gamma   = 0.99
+        f_switch= 10000,     # target network switch frequency
+        lr      = 0.00025,   # learning rate
+        gamma   = 0.99       # discount factor
     )
 
     # agent
     DQN = DQNagent(
         env_id = FLAGS.env,
         q_network=q_network,
-        epsilon=0.1,
+        epsilon=0.1,                        # exploration rate
         n_frames=D_STATE[2],                # number of frames as state
         size=(D_STATE[0],D_STATE[0]),       # rescaled frame size
         bbox=bbox,                          # copping bounding box (default does not crop)
@@ -64,8 +63,8 @@ if __name__ == '__main__':
         DQN.train(
                   n_episodes=50000,     # training episodes
                   memory_size=100000,   # replay memory size
-                  batch_size=32,      # replay batch size
-                  n_eval_episodes=20, # evaluation
+                  batch_size=32,        # replay batch size
+                  n_eval_episodes=20,   # evaluation
                   n_verbose=50000,
                   anneal_epsilon=(1,0.1,1000000),
                   log_dir = log_dir)

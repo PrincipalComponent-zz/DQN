@@ -32,7 +32,7 @@ if __name__ == '__main__':
     FLAGS, _ = parser.parse_known_args()
     # ------------------------------
 
-    MODEL_PATH      = os.path.join('..','..','models','atari') # models for exercise B
+    MODEL_PATH      = os.path.join('..','models') # models for exercise B
     f               = os.path.join(MODEL_PATH,FLAGS.env)
 
     # other params

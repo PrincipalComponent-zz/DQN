@@ -71,5 +71,5 @@ dependencies:
   - tensorflow==1.0.1
   - theano==0.9.0
   - tqdm==4.11.2
-prefix: /home/janto/anaconda2/envs/tf1.0
+prefix: 
 

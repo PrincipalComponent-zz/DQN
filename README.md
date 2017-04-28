@@ -24,6 +24,7 @@ This repo contains my implementation in `Python` using `tensorflow`  and OpenAI'
 ## Folder structure
 
     /code     code base
+    /logs     tensorboard logs and checkpoints
     /models   saved models
 
 ## Training
@@ -34,6 +35,7 @@ The agent be trained on any `atari` environment by running
 
 OpenAI has a [list of all available atari games](https://gym.openai.com/envs#atari). The only requirement is that you specify  preprocessing options in `config.py` for any new environment.
 
+All hyperparameters such as the learning rate for the Q-network or the exploration rate of the agent can be changed in `main.py`.
 
 ## Loading trained agents
 
