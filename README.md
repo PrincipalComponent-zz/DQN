@@ -1,6 +1,8 @@
 # Deep Q-Learning
 
-My objective for this project was to replicate DeepMind's Deep Q-Network agent as published in [1]. This repo contains my implementation in `Python` using `tensorflow`  and OpenAI's `gym`.
+My objective for this project was to replicate DeepMind's Deep Q-Network agent as published in [1]. 
+
+This repo contains my implementation in `Python` using `tensorflow`  and OpenAI's `gym`.
 
 [1] [Mnih et al. 2015. "Human-level control through Deep Reinforcement Learning". Nature 518.](https://www.nature.com/nature/journal/v518/n7540/full/nature14236.html)
 
