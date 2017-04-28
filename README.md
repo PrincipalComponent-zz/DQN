@@ -1,4 +1,9 @@
-# Assignment 3: Deep Reinforcement Learning
+# Deep Q-Learning
+
+My objective for this project was to replicate DeepMind's Deep Q-Network agent as published in [1]
+
+[1] [Mnih et al. 2015. "Human-level control through Deep Reinforcement Learning". Nature 518.](https://www.nature.com/nature/journal/v518/n7540/full/nature14236.html)
+
 
 ![Pong.gif](https://github.com/compgi13/assignment-3-reinforcement-learning-PrincipalComponent/blob/master/videos/Pong.gif)
 ![Boxing.gif](https://github.com/compgi13/assignment-3-reinforcement-learning-PrincipalComponent/blob/master/videos/Boxing.gif)
@@ -17,12 +22,8 @@
 ## Folder structure
 
     /code     code base
-        -- /cartpole    Problem A code base
         -- /atari       Problem B code base
     /models   saved models
-       -- /cartpole
-       -- /atari
-    /report   report .pdf
 
 ## Loading trained agents
 
