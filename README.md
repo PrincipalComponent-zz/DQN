@@ -1,6 +1,6 @@
 # Deep Q-Learning
 
-My objective for this project was to replicate DeepMind's Deep Q-Network agent as published in [1]
+My objective for this project was to replicate DeepMind's Deep Q-Network agent as published in [1]. This repo contains my implementation in `Python` using `tensorflow`  and OpenAI's `gym`.
 
 [1] [Mnih et al. 2015. "Human-level control through Deep Reinforcement Learning". Nature 518.](https://www.nature.com/nature/journal/v518/n7540/full/nature14236.html)
 
@@ -22,32 +22,27 @@ My objective for this project was to replicate DeepMind's Deep Q-Network agent a
 ## Folder structure
 
     /code     code base
-        -- /atari       Problem B code base
     /models   saved models
+
+## Training
+
+The agent be trained on any `atari` environment by running
+
+     python main.py --env [atari-environment] # e.g. Pong-v3
+
+OpenAI has a [list of all available atari games](https://gym.openai.com/envs#atari). The only requirement is that you specify  preprocessing options in `config.py` for any new environment.
+
 
 ## Loading trained agents
 
-The final checkpoints for all trained agents exist in `/models`. Each agent can be loaded and its control performance
+The final checkpoints for all trained agents are saved in `/models`. Each agent can be loaded and its control performance
 evaluated (by default using 20 episodes).
 
-To load an agent from exercise A go to the folder `./code/cartpole` and run:
+To load an agent go to the folder `./code` and run:
 
-      python evaluate.py --exercise a3          # exercise A3
-      python evaluate.py --exercise a4          # exercise A4
-      python evaluate.py --exercise a5          # exercise A5
-      python evaluate.py --exercise a6          # exercise A6
-      python evaluate.py --exercise a7          # exercise A7
-      python evaluate.py --exercise a8          # exercise A8
+     python evaluate.py --env Pong-v3 --n_episodes 20          # Pong agent
+     python evaluate.py --env Boxing-v3 --n_episodes 20        # Boxing agent
 
-To load an agent from exercise B go to the folder `./code/atari` and run:
-
-     python evaluate.py --env Pong-v3           # Pong agent, exercise B
-     python evaluate.py --env Boxing-v3         # Boxing agent, exercise B
-     python evaluate.py --env MsPacman-v3       # MsPacman agent, exercise B
-
-
-If you want to increase the number of test episodes use the `--n_episodes` argument, e.g.
-
-     python evaluate.py --env Pong-v3 --n_episodes 100    # 100 test episodes
+where `--env` can be any `gym` environment.
 
 
